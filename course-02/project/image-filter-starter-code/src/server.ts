@@ -13,8 +13,6 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
   app.use(bodyParser.json());
 
   // @TODO1
-  const try_url =
-    "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg";
 
   app.get(
     "/filteredimage/",

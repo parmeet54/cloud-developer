@@ -25,7 +25,9 @@ router.get("/:id", async (req: Request, res: Response) => {
   if (!id) {
     return res.status(400).send(`id is required`);
   }
-  const item = await FeedItem.findByPrimary(id);
+  const item = await FeedItem.findByPk(id);
+
+  //   item.url = AWS.getGetSignedUrl(item.url);
 
   res.send(item);
 });
